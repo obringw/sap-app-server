@@ -126,13 +126,13 @@
     "sizes": {
       "Small": {
         "None": {
-          "vmSize": "Standard_E4as_v4",
+          "vmSize": "Standard_E8as_v4",
           "disks": [
             {
               "lun": 0,
               "caching": "ReadOnly",
               "createOption": "Empty",
-              "diskSizeGB": 64
+              "diskSizeGB": 128
             }
           ],
           "scriptArguments": {
@@ -141,132 +141,19 @@
           "useFastNetwork": true
         }
       },
-      "Medium": {
-        "None": {
-          "vmSize": "Standard_M64ls",
-          "disks": [
-            {
-              "lun": 0,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 64
-            },
-            {
-              "lun": 1,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 2,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 3,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 4,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 5,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 6,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 7,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 128
-            },
-            {
-              "lun": 8,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 512
-            }
-          ],
-          "scriptArguments": {
-            "Linux": "[concat('-luns ''0#1,2,3,4#5,6,7#8'' -names ''usrsap#data#log#shared'' -paths ''/usr/sap#/hana/data/',parameters('sapSystemId'),'#/hana/log/',parameters('sapSystemId'),'#/hana/shared'' -sizes ''100#100#100#100''')]"
-          },
-          "useFastNetwork": true
-        }
-      },
       "Large": {
         "None": {
-          "vmSize": "Standard_M64s",
+          "vmSize": "Standard_E16as_v4",
           "disks": [
             {
               "lun": 0,
               "caching": "ReadOnly",
               "createOption": "Empty",
-              "diskSizeGB": 64
-            },
-            {
-              "lun": 1,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 2,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 3,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 4,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 5,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 6,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 7,
-              "caching": "None",
-              "createOption": "Empty",
-              "diskSizeGB": 256
-            },
-            {
-              "lun": 8,
-              "caching": "ReadOnly",
-              "createOption": "Empty",
-              "diskSizeGB": 1024
+              "diskSizeGB": 128
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0#1,2,3,4#5,6,7#8'' -names ''usrsap#data#log#shared'' -paths ''/usr/sap#/hana/data/',parameters('sapSystemId'),'#/hana/log/',parameters('sapSystemId'),'#/hana/shared'' -sizes ''100#100#100#100''')]"
+              "Linux": "[concat('-luns ''0'' -names ''usrsap'' -paths ''/usr/sap'' -sizes ''100''')]"
           },
           "useFastNetwork": true
         }
