@@ -23,16 +23,6 @@
         "description": "The type of the operating system you want to deploy."
       }
     },
-    "dbType": {
-      "type": "string",
-      "allowedValues": [
-        "HANA"
-      ],
-      "defaultValue": "HANA",
-      "metadata": {
-        "description": "The type of the database"
-      }
-    },
     "sapSystemSize": {
       "type": "string",
       "allowedValues": [
@@ -336,7 +326,6 @@
       }
     },
     "sidlower": "[toLower(parameters('sapSystemId'))]",
-    "dbtypelower": "[toLower(parameters('dbType'))]",
     "vmName": "[concat('ulsap',variables('sidlower'))]",
     "vnetName": "[concat(variables('vmName'), '-vnet')]",
     "publicIpName": "[concat(variables('vmName'), '-pib')]",
@@ -473,7 +462,7 @@
             }
           }
         ],
-        "enableAcceleratedNetworking": "[variables('sizes')[parameters('sapSystemSize')][parameters('dbType')].useFastNetwork]"
+        "enableAcceleratedNetworking": "[variables('sizes')[parameters('sapSystemSize')].useFastNetwork]"
       }
     },
     {
@@ -488,7 +477,7 @@
       "tags": {"CostCenter": "[parameters('CostCenter')]"},
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[variables('sizes')[parameters('sapSystemSize')][parameters('dbType')].vmSize]"
+          "vmSize": "[variables('sizes')[parameters('sapSystemSize')].vmSize]"
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
@@ -511,7 +500,7 @@
               "storageAccountType": "Premium_LRS"
             }
           },
-          "dataDisks": "[variables('sizes')[parameters('sapSystemSize')][parameters('dbType')].disks]"
+          "dataDisks": "[variables('sizes')[parameters('sapSystemSize')].disks]"
         },
         "networkProfile": {
           "networkInterfaces": [
@@ -540,7 +529,7 @@
           "fileUris": [
             "[variables('csExtension')[variables('internalOSType')].script]"
           ],
-          "commandToExecute": "[concat(variables('csExtension')[variables('internalOSType')].scriptCall, ' ', variables('sizes')[parameters('sapSystemSize')][parameters('dbType')].scriptArguments[variables('internalOSType')])]"
+          "commandToExecute": "[concat(variables('csExtension')[variables('internalOSType')].scriptCall, ' ', variables('sizes')[parameters('sapSystemSize')].scriptArguments[variables('internalOSType')])]"
         }
       }
     }

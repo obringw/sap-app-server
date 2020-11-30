@@ -1,29 +1,29 @@
 # SAP HANA VM deployments using Azure Marketplace images
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmimergel%2Fsap-hana-vm%2Fmain%2Fazuredeploy.json) 
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmimergel%2Fsap-app-server%2Fmain%2Fazuredeploy.json) 
 
-This template takes a minimum amount of parameters and deploys a VM that is customized for use with SAP NetWeaver and HANA DB, using the latest patched version of the selected operating system. This is a template for a 2-tier configuration and it deploys 1 server on Premium Storage with Managed Disks. Filesystems are created via custom script. Where multiple disks are used for the filesystem the logical volume is setup with striping for optimal performance.
+This template takes a minimum amount of parameters and deploys a VM that can be used as SAP Application Server, using the latest patched version of the selected operating system. This template uses Premium Storage with Managed Disks. Filesystems are created via custom script. 
 
 <table>
 	<tr>
 		<th>Size</th>
-		<th>HANA VM</th>
-		<th>HANA VM Storage (EXE + DATA + LOG + SHARE)</th>
+		<th>SAP VM</th>
+		<th>VM Storage (OS + EXE)</th>
 	</tr>
 	<tr>
 		<th>Small</th>
-		<td>M32ls (256GB)</td>
-		<td>1xP6(64GB) + 4xP6(64GB) + 3xP10(128GB) + 1xP20(512GB)</td>
+		<td>E4as_v4 (4vCPU, 32GiB, 6.044 SAPS)</td>
+		<td>1xP6 (64 GB) + 1xP6 (64 GB)</td>
 	</tr>
 	<tr>
 		<th>Medium</th>
-		<td>M64ls (512GB)</td>
-		<td>1xP6(64GB) + 4xP10(128GB) + 3xP10(128GB) + 1xP20(512GB)</td>
+		<td>E8as_v4 (8vCPU, 64GiB, 12.088 SAPS)</td>
+		<td>1xP6 (64 GB) + 1xP6 (64 GB)</td>
 	</tr>
 	<tr>
 		<th>Large</th>
-		<td>M64s (1TB)</td>
-		<td>1xP6(64GB) + 4xP15(256GB) + 3xP15(256GB) + 1xP30(1TB)</td>
+		<td>E16as_v4 (16vCPU, 128GiB, 24.175 SAPS)</td>
+		<td>1xP10 (128 GB) + 1xP10 (128 GB)</td>
 	</tr>
 </table>
 
