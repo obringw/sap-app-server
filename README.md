@@ -8,22 +8,22 @@ This template takes a minimum amount of parameters and deploys a VM that can be 
 	<tr>
 		<th>Size</th>
 		<th>SAP VM</th>
-		<th>VM Storage (EXE)</th>
+		<th>Storage (SAPEXE)</th>
 	</tr>
 	<tr>
 		<th>Small</th>
 		<td>E4as_v4 (4vCPU, 32GiB, 6.044 SAPS)</td>
-		<td>1xP6 (64 GB)</td>
+		<td>1xP6</td>
 	</tr>
 	<tr>
 		<th>Medium</th>
 		<td>E8as_v4 (8vCPU, 64GiB, 12.088 SAPS)</td>
-		<td>1xP10 (128 GB)</td>
+		<td>1xP10</td>
 	</tr>
 	<tr>
 		<th>Large</th>
 		<td>E16as_v4 (16vCPU, 128GiB, 24.175 SAPS)</td>
-		<td>1xP10 (128 GB)</td>
+		<td>1xP10</td>
 	</tr>
 </table>
 
