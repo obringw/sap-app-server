@@ -109,7 +109,9 @@
         "offer": "sles-sap-12-sp5",
         "publisher": "SUSE",
         "OSType": "Linux"
-      }
+      },
+    "dbType": {
+      "type": "None"
     },
     "internalOSType": "[variables('images')[parameters('osType')].OSType]",
     "csExtension": {
@@ -123,7 +125,7 @@
     },
     "sizes": {
       "Small": {
-        "HANA": {
+        "None": {
           "vmSize": "Standard_E4as_v4",
           "disks": [
             {
@@ -140,7 +142,7 @@
         }
       },
       "Medium": {
-        "HANA": {
+        "None": {
           "vmSize": "Standard_M64ls",
           "disks": [
             {
@@ -205,7 +207,7 @@
         }
       },
       "Large": {
-        "HANA": {
+        "None": {
           "vmSize": "Standard_M64s",
           "disks": [
             {
@@ -407,7 +409,7 @@
             }
           }
         ],
-        "enableAcceleratedNetworking": "[variables('sizes')[parameters('sapSystemSize')].useFastNetwork]"
+        "enableAcceleratedNetworking": "[variables('sizes')[parameters('sapSystemSize')][parameters('dbType')].useFastNetwork]"
       }
     },
     {
