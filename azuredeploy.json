@@ -18,7 +18,7 @@
         "RHEL 8",
         "SLES 12"
       ],
-      "defaultValue": "RHEL 7",
+      "defaultValue": "RHEL 8",
       "metadata": {
         "description": "The type of the operating system you want to deploy."
       }
@@ -123,7 +123,7 @@
     },
     "sizes": {
       "Small": {
-          "vmSize": "Standard_E4as_v4",
+          "vmSize": "Standard_E4ds_v4",
           "disks": [
             {
               "lun": 0,
@@ -138,7 +138,7 @@
           "useFastNetwork": true
       },
       "Medium": {
-          "vmSize": "Standard_E8as_v4",
+          "vmSize": "Standard_E8ds_v4",
           "disks": [
             {
               "lun": 0,
@@ -153,7 +153,7 @@
           "useFastNetwork": true
       },
       "Large": {
-          "vmSize": "Standard_E16as_v4",
+          "vmSize": "Standard_E16ds_v4",
           "disks": [
             {
               "lun": 0,
