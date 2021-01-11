@@ -6,7 +6,7 @@
       "type": "string",
       "maxLength": 3,
       "minLength": 3,
-      "defaultValue": "SID",
+      "defaultValue": "E41",
       "metadata": {
         "description": "SAP System ID."
       }
@@ -129,11 +129,11 @@
               "lun": 0,
               "caching": "ReadOnly",
               "createOption": "Empty",
-              "diskSizeGB": 64
+              "diskSizeGB": 128
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''usrsap'' -paths ''/usr/sap'' -sizes ''100''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       },
@@ -144,11 +144,11 @@
               "lun": 0,
               "caching": "ReadOnly",
               "createOption": "Empty",
-              "diskSizeGB": 64
+              "diskSizeGB": 256
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''usrsap'' -paths ''/usr/sap'' -sizes ''100''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       },
@@ -159,11 +159,11 @@
               "lun": 0,
               "caching": "ReadOnly",
               "createOption": "Empty",
-              "diskSizeGB": 64
+              "diskSizeGB": 512
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''usrsap'' -paths ''/usr/sap'' -sizes ''100''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       }

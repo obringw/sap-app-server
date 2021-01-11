@@ -12,17 +12,17 @@ This template takes a minimum amount of parameters and deploys a VM that can be 
 	</tr>
 	<tr>
 		<th>Small</th>
-		<td>E4as_v4 (4vCPU, 32GiB, 6.044 SAPS)</td>
+		<td>E4ds_v4 (4vCPU, 32GiB, 6.044 SAPS)</td>
 		<td>1xP6</td>
 	</tr>
 	<tr>
 		<th>Medium</th>
-		<td>E8as_v4 (8vCPU, 64GiB, 12.088 SAPS)</td>
+		<td>E8ds_v4 (8vCPU, 64GiB, 12.088 SAPS)</td>
 		<td>1xP10</td>
 	</tr>
 	<tr>
 		<th>Large</th>
-		<td>E16as_v4 (16vCPU, 128GiB, 24.175 SAPS)</td>
+		<td>E16ds_v4 (16vCPU, 128GiB, 24.175 SAPS)</td>
 		<td>1xP10</td>
 	</tr>
 </table>
