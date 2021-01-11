@@ -169,7 +169,7 @@
       }
     },
     "sidlower": "[toLower(parameters('sapSystemId'))]",
-    "vmName": "[concat('ulsap',variables('sidlower'))]",
+    "vmName": "[concat('ulsap2',variables('sidlower'))]",
     "vnetName": "[concat(variables('vmName'), '-vnet')]",
     "publicIpName": "[concat(variables('vmName'), '-pib')]",
     "nicName": "[concat(variables('vmName'), '-nic')]",
