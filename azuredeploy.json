@@ -133,7 +133,7 @@
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap/',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap/',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       },
@@ -148,7 +148,7 @@
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap/',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap/',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       },
@@ -163,7 +163,7 @@
             }
           ],
           "scriptArguments": {
-              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
+              "Linux": "[concat('-luns ''0'' -names ''sapexe'' -paths ''/home/',variables('sidlower'),'adm,/sapmnt/',parameters('sapSystemId'),',/usr/sap,/usr/sap/',parameters('sapSystemId'),',/usr/sap/trans,/usr/sap/',parameters('sapSystemId'),'/SUM'' -sizes ''1,2,1,5,20,30''')]"
           },
           "useFastNetwork": true
       }
