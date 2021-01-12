@@ -1,6 +1,6 @@
 # SAP Application Server VM deployments using Azure Marketplace images
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmimergel%2Fsap-app-server%2Fmain%2Fazuredeploy.json) 
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fobringw%2Fsap-app-server%2Fmain%2Fazuredeploy.json) 
 
 This template takes a minimum amount of parameters and deploys a VM that can be used as SAP Application Server, using the latest patched version of the selected operating system. This template uses Premium Storage with Managed Disks. Filesystems are created via custom script. 
 
