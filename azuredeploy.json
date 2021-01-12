@@ -61,6 +61,7 @@
     },
     "subnetId": {
       "type": "string",
+      "defaultValue": "/subscriptions/062ab761-8f9e-4a10-9d08-25f39130c48a/resourceGroups/rg-network-prod-gwc/providers/Microsoft.Network/virtualNetworks/vnet-sap-prod-gwc/subnet/snet-poc-prod-gwc-001",
       "metadata": {
         "description": "The id of the subnet you want to use."
       }
@@ -83,7 +84,7 @@
     },
     "CostCenter": {
       "type": "string",
-      "defaultValue": "CS123456",
+      "defaultValue": "28007510",
       "metadata": {
         "description": "Provide mandatory Cost Center ID"
       }
@@ -117,7 +118,7 @@
         "Publisher": "Microsoft.Azure.Extensions",
         "Name": "CustomScript",
         "Version": "2.0",
-        "script": "https://raw.githubusercontent.com/mimergel/sap-hana-vm/main/scripts/diskConfig.sh",
+        "script": "https://stdekrasapvm.blob.core.windows.net/constdekrasapvm/diskConfig.sh",
         "scriptCall": "sh diskConfig.sh"
       }
     },
